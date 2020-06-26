@@ -85,7 +85,7 @@ insert into brokers (name, phone_number, email, address) values ('Gayla Mateus',
 insert into commodities (name, description) values ('General Goods', 'General Goods');
 insert into commodities (name, description) values ('Advertising Materials/Books/Magazines', 'Advertising Materials/Books/Magazines');
 insert into commodities (name, description) values ('Agricultural Machinery and Implements', 'Agricultural Machinery and Implements');
-insert into commodities (name, description) values ('Air Conditioning Equipment Parts', 'Air Conditioning Equipment Parts"');
+insert into commodities (name, description) values ('Air Conditioning Equipment Parts', 'Air Conditioning Equipment Parts');
 insert into commodities (name, description) values ('Alcoholic Beverages/Beer Wine/Spirits', 'Alcoholic Beverages/Beer Wine/Spirits');
 insert into commodities (name, description) values ('Ammunition, Small Arms, Sporting', 'Ammunition, Small Arms, Sporting');
 insert into commodities (name, description) values ('Lumber', 'Lumber');
