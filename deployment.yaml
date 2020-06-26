@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hasura
+    hasuraService: custom
+  name: hasura
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hasura
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hasura
+    spec:
+      containers:
+      - image: hasura/graphql-engine:v1.2.2
+        imagePullPolicy: IfNotPresent
+        name: hasura
+        env:
+        - name: HASURA_GRAPHQL_DATABASE_URL
+          value: postgres://username:password@host.docker.internal:5432/Truckstop #postgres://username:password@docker.for.win.localhost:5432/Truckstop
+        - name: HASURA_GRAPHQL_ENABLE_CONSOLE
+          value: "true" # set to "true" to enable console
+        - name: HASURA_GRAPHQL_ENABLED_LOG_TYPES
+          value: startup, http-log, webhook-log, websocket-log, query-log
+        ## uncomment next two lines to set an admin secret
+        #- name: HASURA_GRAPHQL_ADMIN_SECRET
+        #  value: mysecretkey
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
