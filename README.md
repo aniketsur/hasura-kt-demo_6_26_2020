@@ -20,6 +20,9 @@ https://www.docker.com/products/docker-desktop
 Click link to download:
 https://github.com/hasura/graphql-engine/releases/download/v1.2.2/cli-hasura-windows-amd64.exe
 
+Rename the downloaded file to hasura.exe .
+You can add the path to the environment variable PATH for making hasura accessible globally.
+
 ## Start Hasura Server Locally
 
 ### Start Hasura locally using Docker Compose:
